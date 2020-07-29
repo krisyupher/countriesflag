@@ -5,7 +5,7 @@ const Header = props => {
   return (
     <div className="HeaderContainer">
       <Link to="/" className="HeaderTittle">
-        <h2>¿Donde en el mundo?</h2>
+        <h2>where in the world?</h2>
       </Link>
       <div>
         <a
@@ -18,7 +18,7 @@ const Header = props => {
           href="https://github.com/krisyupher"
           className="HeaderInfoDeveloperA"
         >
-          <h4 className="HeaderInfoDeveloper">Desarrollador FrontEnd</h4>
+          <h4 className="HeaderInfoDeveloper">Developer FrontEnd</h4>
         </a>
       </div>
     </div>

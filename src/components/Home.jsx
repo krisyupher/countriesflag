@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 /* import PropTypes from 'prop-types'; */
 import Flag from "./Flag.jsx";
 import { useSelector, useDispatch } from 'react-redux';
+import FlagEnglish from "../assets/icons8-great-britain-80.png"
 import "../style/Home.css"
 const Home = () => {
   const [inputValue, setInputValue] = useState("")
@@ -56,15 +57,18 @@ const Home = () => {
       {console.log("countryListByName", countryListByName)}
       {console.log("countryListByRegion", countryListByRegion)}
       <div className="HomeHeaderSearch">
-        <input
-          type="text"
-          value={inputValue}
-          onChange={filterByName}
-          className="HomeFilterByName"
-          placeholder="Busca por nombre"
-        />
+        <div className="containerSearch">
+          <img src={FlagEnglish} alt="FlagEnglish" className="FlagEnglish" />
+          <input
+            type="text"
+            value={inputValue}
+            onChange={filterByName}
+            className="HomeFilterByName"
+            placeholder="Search by name"
+          />
+        </div>
         <select onChange={filterByRegion} className="HomeSelectRegion" id="SelectByRegion">
-          <option value="">Todos</option>
+          <option value="">All</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Africa">Africa</option>

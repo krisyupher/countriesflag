@@ -23,3 +23,10 @@
 .HomeFilterByName:focus{
   border: 1px solid gray;
 }
+.containerSearch{
+ display: flex;
+ align-items: center;
+}
+.containerSearch .FlagEnglish{
+  width: 40px;
+}

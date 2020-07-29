@@ -13,7 +13,7 @@ const Flag = props => {
       <img loading="lazy" src={imgflag} alt={descriptionflag} className="FlagImagenFlag" />
       <h2 className="FlagTittle">{name}</h2>
       <div className="Flag-Informacion-Container">
-        <p> <strong>Poblacion: </strong> {population}</p>
+        <p> <strong>Population: </strong> {population}</p>
         <p> <strong>Capital:</strong> {capital}</p>
         <p> <strong>Region:</strong> {region}</p>
       </div>
