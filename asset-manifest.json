@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/countriesflag/static/css/main.20638026.chunk.css",
+    "main.js": "/countriesflag/static/js/main.0118a31c.chunk.js",
+    "main.js.map": "/countriesflag/static/js/main.0118a31c.chunk.js.map",
+    "runtime-main.js": "/countriesflag/static/js/runtime-main.5cbaa4b1.js",
+    "runtime-main.js.map": "/countriesflag/static/js/runtime-main.5cbaa4b1.js.map",
+    "static/css/2.764ccc25.chunk.css": "/countriesflag/static/css/2.764ccc25.chunk.css",
+    "static/js/2.cb777bb4.chunk.js": "/countriesflag/static/js/2.cb777bb4.chunk.js",
+    "static/js/2.cb777bb4.chunk.js.map": "/countriesflag/static/js/2.cb777bb4.chunk.js.map",
+    "index.html": "/countriesflag/index.html",
+    "precache-manifest.3a32a1d5b4370a0ecd7dd7af3293d6dc.js": "/countriesflag/precache-manifest.3a32a1d5b4370a0ecd7dd7af3293d6dc.js",
+    "service-worker.js": "/countriesflag/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/countriesflag/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.20638026.chunk.css.map": "/countriesflag/static/css/main.20638026.chunk.css.map",
+    "static/js/2.cb777bb4.chunk.js.LICENSE.txt": "/countriesflag/static/js/2.cb777bb4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5cbaa4b1.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.cb777bb4.chunk.js",
+    "static/css/main.20638026.chunk.css",
+    "static/js/main.0118a31c.chunk.js"
+  ]
+}
