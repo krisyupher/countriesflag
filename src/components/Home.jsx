@@ -9,8 +9,6 @@ const Home = () => {
 
   const countryListByName = useSelector((state) => state.countryListByName)
   const countryListByRegion = useSelector((state) => state.countryListByRegion)
-
-
   const countryList = useSelector((state) => {
     if (countryListByName.length > 0) {
       return countryListByName
@@ -39,12 +37,14 @@ const Home = () => {
   }, [dispatch])
   const filterByName = (e) => {
     setInputValue(e.target.value);
+    document.getElementById("SelectByRegion").selectedIndex = 0;
     dispatch({
       type: 'SET_COUNTRY_BY_NAME',
       payload: e.target.value,
     })
   }
   const filterByRegion = (e) => {
+    setInputValue("");
     dispatch({
       type: 'SET_COUNTRY_BY_REGION',
       payload: e.target.value,
@@ -52,6 +52,9 @@ const Home = () => {
   }
   return (
     <>
+      {console.log("countryList", countryList)}
+      {console.log("countryListByName", countryListByName)}
+      {console.log("countryListByRegion", countryListByRegion)}
       <div className="HomeHeaderSearch">
         <input
           type="text"
@@ -60,7 +63,8 @@ const Home = () => {
           className="HomeFilterByName"
           placeholder="Busca por nombre"
         />
-        <select onChange={filterByRegion} className="HomeSelectRegion" >
+        <select onChange={filterByRegion} className="HomeSelectRegion" id="SelectByRegion">
+          <option value="">Todos</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Africa">Africa</option>
@@ -79,7 +83,6 @@ const Home = () => {
               population={country.population}
               capital={country.capital}
               region={country.region}
-
             />
           )
         })}

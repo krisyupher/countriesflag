@@ -3,7 +3,7 @@ import "../style/CountryDetail.css";
 /* import PropTypes from 'prop-types'; */
 import CountrySelected from "../components/CountrySelect.jsx"
 
-const CountryDetail = ({ match }) => {
+const CountryDetail = ({ match, history }) => {
   const [country, setCountry] = useState([]);
   useEffect(() => {
     fetch(`https://restcountries.eu/rest/v2/name/${match.params.id}`)
@@ -17,9 +17,17 @@ const CountryDetail = ({ match }) => {
         console.log("Grave error")
       })
   }, [match])
+  function handleClick() {
+    history.goBack()
+  }
   return (
     <div className="CountryDetailContainer">
-      <CountrySelected {...country} />    
+      <div className="BackContainer">
+        <button className="back" onClick={handleClick}>
+          {"← Back"}
+        </button>
+      </div>
+      <CountrySelected {...country} />
     </div>
   );
 };

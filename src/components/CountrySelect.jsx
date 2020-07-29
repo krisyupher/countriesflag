@@ -17,10 +17,10 @@ const CountrySelected = ({
     <>
       <div className="CountrySelectContainer">
         <img src={flag} alt="" className="CountrySelectImagenFlag" />
-        <div>
+        <div className="ContainerCountrySelectInfoData">
           <h2>{name}</h2>
           <div className="CountrySelectInfoData" >
-            <div>
+            <div class="">
               <p><strong>Native Name:</strong> {nativeName}</p>
               <p><strong>Population:</strong> {population}</p>
               <p><strong>Region:</strong> {region}</p>
@@ -36,7 +36,9 @@ const CountrySelected = ({
             </div>
           </div>
           <p className="borders"><strong>Border Countries:</strong></p>
-          {borders.map((item) => <span className="CountrySelectBorderCountries">{item}</span>)}
+          <div className="ContainerBorderCountries">
+            {borders.map((item) => <span className="CountrySelectBorderCountries">{item}</span>)}
+          </div>
         </div>
       </div>
     </>
