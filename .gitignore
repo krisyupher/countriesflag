@@ -8,16 +8,33 @@
 # testing
 /coverage
 
-# production
+# next.js
+/.next
+/.next/*
+/out
 /build
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# backup folders
+/src.backup
+/src.old
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDE
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
