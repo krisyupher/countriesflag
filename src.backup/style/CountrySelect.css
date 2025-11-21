@@ -1,0 +1,34 @@
+.CountrySelectContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: inherit;
+}
+.CountrySelectImagenFlag {
+  width: 30vw;
+}
+.CountrySelectBorderCountries {
+  padding: 0.5em 2em;
+  border-radius: 5px;
+  margin: 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+  display: inline-flex;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+.ContainerBorderCountries{
+  max-width: 500px;
+}
+.ContainerCountrySelectInfoData{
+  margin: 0 15px;
+}
+@media (max-width: 768px) {
+  .CountrySelectContainer {
+    margin-top: 0;
+  }
+  .CountrySelectImagenFlag {
+    width: 100%;
+  }
+}

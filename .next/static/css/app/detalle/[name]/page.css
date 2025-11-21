@@ -1,0 +1,197 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/detalle/[name]/page.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__I8t0O {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+.page_container__gmFW9 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page_backButton__B8Yve {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+}
+
+.page_backButton__B8Yve:hover {
+  background-color: #0070f3;
+  color: white;
+}
+
+.page_detailContainer__xdM_y {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  animation: page_fadeIn__EGRA3 0.3s ease-in;
+}
+
+.page_flagSection__Msxhx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  min-height: 400px;
+}
+
+.page_largeFlagFlag__pkd8x {
+  font-size: 10rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_infoSection__0PNJt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page_title__usDDp {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.page_official__S__gd {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.page_infoGrid__gqcwA {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page_infoColumn__h_FY8 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.page_infoColumn__h_FY8 p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.page_infoColumn__h_FY8 strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.page_bordersSection__1gLLV {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.page_bordersSection__1gLLV p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.page_bordersList__Cw4HU {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.page_borderBadge__f4qMP {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.page_borderBadge__f4qMP:hover {
+  background-color: #0070f3;
+  color: white;
+  border-color: #0070f3;
+}
+
+.page_loading__pnyks,
+.page_error__b4e7q {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.1rem;
+}
+
+.page_loading__pnyks {
+  color: #666;
+}
+
+.page_error__b4e7q {
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+@keyframes page_fadeIn__EGRA3 {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page_detailContainer__xdM_y {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .page_flagSection__Msxhx {
+    min-height: 300px;
+  }
+
+  .page_largeFlagFlag__pkd8x {
+    font-size: 7rem;
+  }
+
+  .page_title__usDDp {
+    font-size: 2rem;
+  }
+
+  .page_infoGrid__gqcwA {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page_title__usDDp {
+    font-size: 1.5rem;
+  }
+
+  .page_infoSection__0PNJt {
+    padding: 1rem 0;
+  }
+
+  .page_largeFlagFlag__pkd8x {
+    font-size: 5rem;
+  }
+}
+
