@@ -21,7 +21,7 @@ const Home = () => {
   })
   /*   const [countryList, setCountryList] = useState([]); */
   useEffect(() => {
-    fetch('https://restcountries.eu/rest/v2/all')
+    fetch('https://restcountries.com/v3.1/all?fields=10')
       .then((response) => {
         return response.json()
       })
