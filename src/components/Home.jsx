@@ -21,15 +21,23 @@ const Home = () => {
   })
   /*   const [countryList, setCountryList] = useState([]); */
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=10')
+    fetch('https://restcountries.com/v3.1/all?fields=name,flag,nativeName,population,capital,region')
       .then((response) => {
         return response.json()
       })
       .then((data) => {
-        /* setCountryList(data) */
+        const normalizedData = data.map(country => ({
+          name: country.name?.common || '',
+          numericCode: country.cca3 || '',
+          flag: country.flag || '',
+          nativeName: country.nativeName ? Object.values(country.nativeName)[0]?.common || '' : '',
+          population: country.population || 0,
+          capital: Array.isArray(country.capital) ? country.capital[0] || '' : '',
+          region: country.region || ''
+        }))
         dispatch({
           type: 'SET_COUNTRY_LIST', /* Accion en la funcion reducer*/
-          payload: data /* Estado en la funcion reducer */
+          payload: normalizedData /* Estado en la funcion reducer */
         })
       })
       .catch(() => {

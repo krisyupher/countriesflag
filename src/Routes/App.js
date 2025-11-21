@@ -9,7 +9,6 @@ const App = () => (
   <BrowserRouter>
     <Header />
     <Switch>
-      <Route exact path='/countriesflag/' component={Home} />
       <Route exact path='/' component={Home} />
       <Route exact path='/Detalle/:id' component={CountryDetail} />
     </Switch>
