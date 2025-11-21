@@ -6,7 +6,7 @@ import CountrySelected from "../components/CountrySelect.jsx"
 const CountryDetail = ({ match, history }) => {
   const [country, setCountry] = useState([]);
   useEffect(() => {
-    fetch(`https://restcountries.eu/rest/v2/name/${match.params.id}`)
+    fetch(`https://restcountries.com/v3.1/name/${match.params.id}`)
       .then((response) => {
         return response.json()
       })
