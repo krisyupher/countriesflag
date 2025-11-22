@@ -1,75 +1,113 @@
-Normalize.css
-Redux
-Router
+# Countries & Flags
 
+A modern Next.js web application that displays country information with filtering capabilities. The app fetches country data from the REST Countries API and allows users to search countries by name or filter by region.
 
+## Tech Stack
 
+- **Next.js 14** - React framework with App Router
+- **React 18** - UI component library
+- **SCSS** - Styling with CSS Modules
+- **Context API** - State management
+- **REST Countries API v3.1** - Data source
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+
+- Browse all countries with flag emojis and key information
+- Search countries by name with real-time filtering
+- Filter countries by region
+- View detailed country information including:
+  - Official name and native name
+  - Population and capital
+  - Region and sub-region
+  - Top-level domain and currencies
+  - Languages spoken
+  - Bordering countries
+- Responsive design for mobile, tablet, and desktop
+- Fast navigation with Next.js client-side routing
+
+## Project Structure
+
+```
+app/
+├── page.jsx                  - Home page with search and filter UI
+├── layout.jsx               - Root layout with metadata
+├── globals.scss             - Global styles and CSS reset
+├── _variables.scss          - SCSS variables (colors, spacing, typography)
+├── components/
+│   ├── Header/              - Navigation header component
+│   ├── SearchBar/           - Search and region filter component
+│   ├── CountryCard/         - Country card display component
+│   └── DetailCountry/       - Detail page component
+├── detalle/[name]/
+│   ├── page.jsx            - Dynamic route handler
+│   └── page.module.scss    - Detail page styles
+└── context/
+    └── CountriesContext.jsx - Context provider for countries data
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode.
+Open [http://localhost:3005](http://localhost:3005) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The page will automatically reload when you make edits.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `.next` folder.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Runs the production build (requires `npm run build` first).
 
-### `npm run eject`
+### `npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Runs ESLint to check code quality.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Open in browser:**
+   - Navigate to [http://localhost:3005](http://localhost:3005)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Data Flow
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Home Page**: Fetches all countries on mount via REST Countries API → displays with filter controls
+- **Detail Page**: Route param `[name]` triggers fetch of single country data → displays comprehensive information
+- **Filtering**: Name and region filters are mutually exclusive; selecting one clears the other
 
-### Code Splitting
+## Styling
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+The project uses SCSS with CSS Modules for component styling:
+- **globals.scss**: Global styles, CSS reset, and typography defaults (imported in layout.jsx)
+- **_variables.scss**: Reusable SCSS variables for colors, spacing, and transitions
+- **Component .module.scss**: Scoped styles for individual components
 
-### Analyzing the Bundle Size
+## API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Data is fetched from the [REST Countries API v3.1](https://restcountries.com/)
 
-### Making a Progressive Web App
+Endpoints used:
+- `GET /v3.1/all` - Fetch all countries
+- `GET /v3.1/name/{name}` - Fetch single country by name
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Browser Support
 
-### Advanced Configuration
+Works on all modern browsers (Chrome, Firefox, Safari, Edge)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## License
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is open source and available under the MIT License.

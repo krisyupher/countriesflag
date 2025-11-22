@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import { CountriesProvider } from './context/CountriesContext'
 import Header from './components/Header'
 

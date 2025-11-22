@@ -1,0 +1,20 @@
+@import '../../_variables.scss';
+
+.header {
+  background-color: #fff;
+  box-shadow: $shadow-sm;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-xl;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $text-dark;
+  display: inline-block;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../_variables.scss';
+
+.searchContainer {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 200px;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+}
+
+.select {
+  padding: $spacing-sm $spacing-md;
+  background-color: white;
+  min-width: 150px;
+}
+
+@media (max-width: 640px) {
+  .searchContainer {
+    flex-direction: column;
+  }
+
+  .searchBox {
+    min-width: unset;
+  }
+
+  .select {
+    min-width: unset;
+    width: 100%;
+  }
+}

@@ -1,33 +1,34 @@
+@import '../../_variables.scss';
+
+$gradient-start: #667eea;
+$gradient-end: #764ba2;
+$bg-light: #f0f0f0;
+
 .main {
   min-height: calc(100vh - 200px);
-  padding: 2rem 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding: $spacing-xl 0;
 }
 
 .backButton {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #f0f0f0;
-  border-radius: 6px;
-  margin-bottom: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: $spacing-sm $spacing-lg;
+  background-color: $bg-light;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-xl;
+  transition: background-color $transition-base, color $transition-base;
   font-weight: 500;
-}
+  cursor: pointer;
 
-.backButton:hover {
-  background-color: #0070f3;
-  color: white;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
 }
 
 .detailContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 3rem;
+  gap: $spacing-2xl;
   animation: fadeIn 0.3s ease-in;
 }
 
@@ -35,8 +36,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 8px;
+  background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
+  border-radius: $radius-lg;
   min-height: 400px;
 }
 
@@ -56,50 +57,50 @@
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+  margin-bottom: $spacing-sm;
+  color: $text-dark;
 }
 
 .official {
   font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
+  color: $text-gray;
+  margin-bottom: $spacing-xl;
 }
 
 .infoGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xl;
 }
 
 .infoColumn {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
 
-.infoColumn p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-}
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
 
-.infoColumn strong {
-  color: #333;
-  margin-right: 0.5rem;
+  strong {
+    color: $text-dark;
+    margin-right: 0.5rem;
+  }
 }
 
 .bordersSection {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #ddd;
-}
+  border-top: 1px solid $border-color;
 
-.bordersSection p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #333;
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: $text-dark;
+  }
 }
 
 .bordersList {
@@ -111,18 +112,19 @@
 .borderBadge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: $bg-light;
+  border: 1px solid $border-color;
   border-radius: 4px;
   font-size: 0.9rem;
-  color: #333;
+  color: $text-dark;
   transition: all 0.3s ease;
-}
+  cursor: pointer;
 
-.borderBadge:hover {
-  background-color: #0070f3;
-  color: white;
-  border-color: #0070f3;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+    border-color: $primary-color;
+  }
 }
 
 .loading,
@@ -133,12 +135,12 @@
 }
 
 .loading {
-  color: #666;
+  color: $text-gray;
 }
 
 .error {
-  color: #d32f2f;
-  background-color: #ffebee;
+  color: $error-color;
+  background-color: $error-bg;
   padding: 2rem;
   border-radius: 8px;
 }

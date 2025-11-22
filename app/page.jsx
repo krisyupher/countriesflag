@@ -3,7 +3,7 @@
 import { useCountries } from './context/CountriesContext'
 import SearchBar from './components/SearchBar'
 import CountryCard from './components/CountryCard'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 export default function Home() {
   const { filteredList, isLoading, error } = useCountries()

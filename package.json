@@ -15,7 +15,7 @@
     "deploy": "npm run build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "next/core-web-vitals"
   },
   "browserslist": {
     "production": [
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0"
+    "eslint-config-next": "^14.0.0",
+    "sass": "^1.94.2"
   }
 }

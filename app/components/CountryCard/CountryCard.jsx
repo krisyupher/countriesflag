@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import styles from './CountryCard.module.css'
+import styles from './CountryCard.module.scss'
 
 export default function CountryCard({ country }) {
   return (

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { useCountries } from '../context/CountriesContext'
-import styles from './SearchBar.module.css'
+import { useCountries } from '../../context/CountriesContext'
+import styles from './SearchBar.module.scss'
 
 const REGIONS = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 

@@ -1,18 +1,14 @@
+@import './_variables.scss';
+
 .main {
   min-height: calc(100vh - 200px);
-  padding: 2rem 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding: $spacing-xl 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: $spacing-xl;
   animation: fadeIn 0.3s ease-in;
 }
 
@@ -20,23 +16,23 @@
 .error,
 .noResults {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: $spacing-2xl $spacing-md;
   font-size: 1.1rem;
-  color: #666;
+  color: $text-gray;
 }
 
 .error {
-  color: #d32f2f;
-  background-color: #ffebee;
-  padding: 2rem;
-  border-radius: 8px;
+  color: $error-color;
+  background-color: $error-bg;
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
 }
 
 .noResults {
-  color: #0070f3;
-  background-color: #f0f7ff;
-  padding: 2rem;
-  border-radius: 8px;
+  color: $primary-color;
+  background-color: $info-bg;
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
 }
 
 @keyframes fadeIn {

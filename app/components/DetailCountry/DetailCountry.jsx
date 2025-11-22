@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import styles from './page.module.scss'
+import styles from './DetailCountry.module.scss'
 
 export default function CountryDetail({ params }) {
   const router = useRouter()
