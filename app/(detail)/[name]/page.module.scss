@@ -1,0 +1,146 @@
+@import '../../_variables.scss';
+
+.main {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-xl 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  background-color: white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  text-decoration: none;
+  color: $text-dark;
+  font-weight: 500;
+  transition: transform $transition-base, box-shadow $transition-base;
+  margin-bottom: $spacing-2xl;
+
+  &:hover {
+    transform: translateX(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.detailContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-2xl;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.flagSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-2xl;
+  min-height: 300px;
+}
+
+.largeFlag {
+  font-size: 10rem;
+  line-height: 1;
+}
+
+.infoSection {
+  padding: $spacing-lg;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: $spacing-sm;
+  color: $text-dark;
+  font-weight: 700;
+}
+
+.official {
+  font-size: 1.1rem;
+  color: $text-gray;
+  margin-bottom: $spacing-xl;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-2xl;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  p {
+    font-size: 1rem;
+    color: $text-gray;
+    margin: 0;
+  }
+
+  strong {
+    color: $text-dark;
+    margin-right: $spacing-sm;
+  }
+}
+
+.bordersSection {
+  margin-top: $spacing-xl;
+
+  p {
+    margin-bottom: $spacing-md;
+    color: $text-dark;
+  }
+}
+
+.bordersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.borderBadge {
+  background-color: white;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  font-size: 0.9rem;
+  color: $text-dark;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: $spacing-2xl $spacing-md;
+  font-size: 1.1rem;
+}
+
+.loading {
+  color: $text-gray;
+}
+
+.error {
+  color: $error-color;
+  background-color: $error-bg;
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
+}

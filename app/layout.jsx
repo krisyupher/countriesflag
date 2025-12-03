@@ -1,6 +1,5 @@
 import './globals.scss'
-import { CountriesProvider } from './context/CountriesContext'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 
 export const metadata = {
   title: 'Countries & Flags',
@@ -11,10 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <CountriesProvider>
-          <Header />
-          {children}
-        </CountriesProvider>
+        <Header />
+        {children}
       </body>
     </html>
   )
