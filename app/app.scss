@@ -1,0 +1,64 @@
+@import './_variables.scss';
+
+.main {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-xl 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $spacing-xl;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.loading,
+.error,
+.noResults {
+  text-align: center;
+  padding: $spacing-2xl $spacing-md;
+  font-size: 1.1rem;
+  color: $text-gray;
+}
+
+.error {
+  color: $error-color;
+  background-color: $error-bg;
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
+}
+
+.noResults {
+  color: $primary-color;
+  background-color: $info-bg;
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 1rem 0;
+  }
+}
